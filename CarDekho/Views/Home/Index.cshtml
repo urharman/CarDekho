@@ -1,0 +1,34 @@
+﻿@model IEnumerable<CarDekho.Models.car>
+@{
+    ViewBag.Title = "Index";
+}
+<br/>
+<br/>
+<br/>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+
+            <div class="col-md-4" class="margin-bottom:25px;border-right:1px dotted grey;text-align:center;">
+                <div class="thumbnail">
+                    <h1 style="text-align:center"> @item.Company</h1>
+                    <hr/>
+                    <h2 style="text-align:center">@item.Name</h2>
+                    <div class="Image">
+                        <img class="img-responsive" src="~/carPhoto/@item.Photo" />
+
+                    </div>
+                </div>
+                <h3 style="text-align:center"> @item.Specification</h3>
+                <a class="col-md-4 btn btn-primary" href="#">Buy Now</a>
+            </div>
+        }
+
+
+        </div>
+
+
+</div>
+
